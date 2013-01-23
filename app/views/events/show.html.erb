@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Event type:</b>
+  <%= @event.event_type %>
+</p>
+
+<p>
+  <b>Event:</b>
+  <%= @event.event_id %>
+</p>
+
+<p>
+  <b>Timestamp:</b>
+  <%= @event.timestamp %>
+</p>
+
+<p>
+  <b>Customer:</b>
+  <%= @event.customer_id %>
+</p>
+
+<p>
+  <b>Email address:</b>
+  <%= @event.email_address %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @event.email_id %>
+</p>
+
+<p>
+  <b>Subject:</b>
+  <%= @event.subject %>
+</p>
+
+<p>
+  <b>Campaign:</b>
+  <%= @event.campaign_id %>
+</p>
+
+<p>
+  <b>Campaign name:</b>
+  <%= @event.campaign_name %>
+</p>
+
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>

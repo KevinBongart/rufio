@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  event_type: MyString
+  event_id: MyString
+  timestamp: 2013-01-23 13:09:01
+  customer_id: MyString
+  email_address: MyString
+  email_id: MyString
+  subject: MyString
+  campaign_id: MyString
+  campaign_name: MyString
+
+two:
+  event_type: MyString
+  event_id: MyString
+  timestamp: 2013-01-23 13:09:01
+  customer_id: MyString
+  email_address: MyString
+  email_id: MyString
+  subject: MyString
+  campaign_id: MyString
+  campaign_name: MyString
