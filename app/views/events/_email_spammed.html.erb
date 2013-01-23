@@ -1,7 +1,5 @@
-<%= div_for event, class: "#{event} #{event.event_type}" do %>
-  <%= event.email_address %>
-  <%= link_to 'marked as spam', event %>
-  the <%= event.campaign_name %> email:
-  <i><%= event.subject %></i>
-  (<%= time_ago_in_words(Time.at(event.timestamp.to_i)) %> ago)
-<% end %>
+<%= event.email_address %>
+<%= link_to 'marked as spam', event %>
+the <%= event.campaign_name %> email:
+<i><%= event.subject %></i>
+(<%= time_ago_in_words(Time.at(event.timestamp.to_i)) %> ago)
