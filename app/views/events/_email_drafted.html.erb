@@ -1,0 +1,8 @@
+<%= div_for event, class: "#{event} #{event.event_type}" do %>
+  <%= link_to 'New draft email', event %>:
+  <%= event.campaign_name %>
+  (<i><%= event.subject %></i>)
+  for
+  <%= event.email_address %>
+  (<%= time_ago_in_words(Time.at(event.timestamp.to_i)) %> ago)
+<% end %>
