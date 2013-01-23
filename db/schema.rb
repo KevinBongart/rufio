@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(:version => 20130123180901) do
   create_table "events", :force => true do |t|
     t.string   "event_type"
     t.string   "event_id"
-    t.datetime "timestamp"
+    t.string   "timestamp"
     t.string   "customer_id"
     t.string   "email_address"
     t.string   "email_id"

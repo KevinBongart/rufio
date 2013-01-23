@@ -41,7 +41,7 @@ class EventsController < ApplicationController
   # POST /events.json
   def create
     data = params.delete(:data)
-    params[:timestamp] = params[:timestamp].to_i
+    params[:timestamp] = params[:timestamp].to_s
     @event = Event.new(params[:event].merge(data))
 
     respond_to do |format|
