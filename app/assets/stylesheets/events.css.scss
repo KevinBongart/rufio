@@ -1,3 +1,24 @@
 // Place all the styles related to the events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.event {
+  // color: black;
+  font-size: 14px;
+  margin-bottom: 4px;
+  padding: 12px 12px;
+
+  // Green events: cool beans
+  &.email_delivered {
+    background-color: #75dc8c;
+  }
+
+  // Red events: alert!
+  &.email_bounced, &.email_dropped, &.email_spammed {
+    background-color: #fc9181;
+  }
+
+  &.email_clicked, &.email_drafted, &.email_opened {
+    background-color: #ededed;
+  }
+}
