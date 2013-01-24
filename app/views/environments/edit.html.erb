@@ -2,5 +2,9 @@
 
 <%= render 'form' %>
 
+<p>
+  Hook Customer.io up to <b><%= "http://#{request.host}/events.json?token=#{@environment.token}" %></b>
+</p>
+
 <%= link_to 'Show', @environment %> |
 <%= link_to 'Back', environments_path %>
