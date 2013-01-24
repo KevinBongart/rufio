@@ -4,6 +4,10 @@ class Environment < ActiveRecord::Base
 
   has_many :events
 
+  def to_param
+    "#{id}-#{name.parameterize}"
+  end
+
   private
 
   def generate_token
