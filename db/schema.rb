@@ -11,7 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130123180901) do
+ActiveRecord::Schema.define(:version => 20130124000323) do
+
+  create_table "environments", :force => true do |t|
+    t.string   "name"
+    t.string   "token"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "events", :force => true do |t|
     t.string   "event_type"
@@ -23,8 +30,9 @@ ActiveRecord::Schema.define(:version => 20130123180901) do
     t.string   "subject"
     t.string   "campaign_id"
     t.string   "campaign_name"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+    t.integer  "environment_id"
   end
 
 end
