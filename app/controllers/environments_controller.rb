@@ -1,4 +1,6 @@
 class EnvironmentsController < ApplicationController
+  before_filter :authenticate_opensesame!
+
   # GET /environments
   # GET /environments.json
   def index

@@ -1,4 +1,5 @@
 class EventsController < ApplicationController
+  before_filter :authenticate_opensesame!, except: :create
   before_filter :find_environment, only: :create
 
   # GET /events
