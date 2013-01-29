@@ -1,0 +1,15 @@
+<div id="header">
+  <h1><%= link_to "Rufio", root_path %></h1>
+
+  <div id="environments">
+    <% @environments.each do |environment| %>
+      <% if environment == @environment %>
+        <%= environment.name %>
+        (<%= link_to "edit", edit_environment_path(environment) %>)
+      <% else %>
+        <%= link_to environment.name, environment %>
+      <% end %>
+      <%= "|" unless environment == @environments.last %>
+    <% end %>
+  </div>
+</div>

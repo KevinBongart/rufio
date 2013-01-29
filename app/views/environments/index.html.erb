@@ -1,9 +1,7 @@
-<h1>Rufio</h1>
-
 <ul>
-<% @environments.each do |environment| %>
-  <li><%= link_to environment.name, environment %></li>
-<% end %>
+  <% @environments.each do |environment| %>
+    <li><%= link_to environment.name, environment %></li>
+  <% end %>
 </ul>
 
 <%= link_to 'New Environment', new_environment_path %>
