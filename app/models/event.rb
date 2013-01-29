@@ -4,4 +4,6 @@ class Event < ActiveRecord::Base
   belongs_to :environment
 
   default_scope order('created_at DESC')
+
+  self.per_page = 100
 end

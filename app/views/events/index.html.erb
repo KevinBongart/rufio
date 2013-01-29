@@ -3,3 +3,8 @@
     <%= render "events/#{event.event_type}", event: event %>
   <% end %>
 <% end %>
+
+<div id="pagination">
+  <div><%= page_entries_info @events %></div>
+  <%= will_paginate @events %>
+</div>
