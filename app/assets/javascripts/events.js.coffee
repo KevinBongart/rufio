@@ -1,3 +1,20 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
+$ ->
+  getCustomerId = (object) ->
+    $(object).data("customerid")
+
+  highlightRelatedCustomerEvents = (object) ->
+    customerid = getCustomerId(object)
+    $(".event[data-customerid=#{customerid}]").addClass("selected")
+    $(".event:not([data-customerid=#{customerid}])").addClass("faded").fadeTo('fast', 0.2)
+
+  resetHighlightedEvents = (object) ->
+    customerid = getCustomerId(object)
+    $(".event.selected").removeClass("selected")
+    $(".event.faded").removeClass("faded").fadeTo('fast', 1)
+
+  $(".event").on("click", ->
+    if $(this).hasClass("selected") || $(this).hasClass("faded")
+      resetHighlightedEvents($(this))
+    else
+      highlightRelatedCustomerEvents($(this))
+  )
