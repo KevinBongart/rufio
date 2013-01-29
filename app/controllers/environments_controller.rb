@@ -2,11 +2,10 @@ class EnvironmentsController < ApplicationController
   # GET /environments
   # GET /environments.json
   def index
-    @environments = Environment.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @environments }
+    if @environments.any?
+      redirect_to @environments.first
+    else
+      redirect_to settings_path
     end
   end
 

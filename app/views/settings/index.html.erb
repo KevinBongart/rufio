@@ -1,6 +1,6 @@
 <ul>
   <% @environments.each do |environment| %>
-    <li><%= link_to environment.name, environment %></li>
+    <li><%= link_to environment.name, edit_environment_path(environment) %></li>
   <% end %>
 </ul>
 
