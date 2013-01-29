@@ -14,7 +14,11 @@ class EnvironmentsController < ApplicationController
   # GET /environments/1.json
   def show
     @environment = Environment.find(params[:id])
-    @events = @environment.events.paginate(page: params[:page])
+    if params[:filter]
+      @events = @environment.events.errors.paginate(page: params[:page])
+    else
+      @events = @environment.events.paginate(page: params[:page])
+    end
     render "events/index"
   end
 

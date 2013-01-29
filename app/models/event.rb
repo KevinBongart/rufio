@@ -4,6 +4,7 @@ class Event < ActiveRecord::Base
   belongs_to :environment
 
   default_scope order('created_at DESC')
+  scope :errors, where(event_type: :email_bounced)
 
   self.per_page = 100
 end
