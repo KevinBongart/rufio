@@ -1,10 +1,10 @@
-<% @events.each do |event| %>
-  <%= div_for event, class: event.event_type do %>
-    <%= render "events/#{event.event_type}", event: event %>
-  <% end %>
-<% end %>
+<%= javascript_include_tag "application" %>
 
-<div id="pagination">
-  <div><%= page_entries_info @events %></div>
-  <%= will_paginate @events %>
+<div id="events">
+  <%= render @events %>
+
+  <div id="pagination">
+    <div><%= page_entries_info @events %></div>
+    <%= will_paginate @events %>
+  </div>
 </div>

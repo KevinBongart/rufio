@@ -1,0 +1,3 @@
+<%= div_for event, class: event.event_type do %>
+  <%= render "events/#{event.event_type}", event: event %>
+<% end %>
