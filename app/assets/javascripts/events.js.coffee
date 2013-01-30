@@ -12,9 +12,9 @@ $ ->
     $(".event.selected").removeClass("selected")
     $(".event.faded").removeClass("faded").fadeTo('fast', 1)
 
-  $(".event").on("click", ->
-    if $(this).hasClass("selected") || $(this).hasClass("faded")
-      resetHighlightedEvents($(this))
-    else
-      highlightRelatedCustomerEvents($(this))
-  )
+  $(".event").on "click", ->
+    unless event.target.nodeName == 'A'
+      if $(this).hasClass("selected") || $(this).hasClass("faded")
+        resetHighlightedEvents($(this))
+      else
+        highlightRelatedCustomerEvents($(this))
