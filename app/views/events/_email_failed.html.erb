@@ -1,0 +1,7 @@
+Error:
+The <%= event.campaign_name %> email
+(<i><%= event.subject %></i>)
+for
+<%= event.email_address %>
+<%= link_to 'failed', event %>
+(<%= time_ago_in_words(Time.at(event.timestamp.to_i)) %> ago)

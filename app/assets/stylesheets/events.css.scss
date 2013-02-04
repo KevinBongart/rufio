@@ -14,7 +14,7 @@
   }
 
   // Red events: alert!
-  &.email_bounced, &.email_dropped, &.email_spammed {
+  &.email_bounced, &.email_dropped, &.email_spammed, &.email_failed {
     background-color: #fc9181;
   }
 
