@@ -1,0 +1,2 @@
+<% options = options_from_collection_for_select(@environments, 'path', 'name', @environment.path) %>
+<%= select(:environment, :id, options) %>

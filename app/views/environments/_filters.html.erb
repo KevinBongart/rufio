@@ -1,0 +1,12 @@
+<span id="filters">
+  <% @filters.each do |filter_name, count| %>
+    <% if filter_name == @filter %>
+      <%= filter_name %>
+    <% else %>
+      <%= link_to filter_name, environment_path(@environment, filter: filter_name) %>
+    <% end %>
+    (<%= count %>)
+  <% end %>
+
+  <%= link_to "reset", @environment if @filter %>
+</span>

@@ -8,6 +8,10 @@ class Environment < ActiveRecord::Base
     "#{id}-#{name.parameterize}"
   end
 
+  def path
+    Rails.application.routes.url_helpers.environment_path(self)
+  end
+
   private
 
   def generate_token
