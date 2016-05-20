@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
 gem 'jquery-rails'
+gem 'opensesame'
 gem 'will_paginate', '~> 3.0'
 
 group :assets do
